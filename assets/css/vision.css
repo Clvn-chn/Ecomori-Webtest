@@ -1,0 +1,326 @@
+
+/*=============== VISION ===============*/
+.vision{
+  position: relative;
+  background: url("Background\ \(\ Visi\ Misi\ \).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height:auto;
+  min-height:100vh;
+  padding:120px 0;
+  overflow:hidden;
+}
+
+
+.vision::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  z-index:1;
+}
+
+.vision::after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:#4ea56b;
+  opacity:0.08;
+  filter:blur(160px);
+  left:-200px;
+  top:200px;
+  border-radius:50%;
+  z-index:1;
+}
+
+.vision .glow-right{
+  position:absolute;
+  width:450px;
+  height:450px;
+  background:#7a4a2c;
+  opacity:0.08;
+  filter:blur(160px);
+  right:-200px;
+  top:100px;
+  border-radius:50%;
+  z-index:1;
+}
+
+.vision__title,
+.vision__container{
+  position:relative;
+  z-index:2;
+}
+/* Title */
+
+.vision__title{
+  font-size:48px;
+  text-align:center;
+  color:#ffffff;
+  margin-bottom:70px;
+  position:relative;
+  text-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
+
+.vision__title::after{
+  content:"";
+  width:80px;
+  height:4px;
+  background:#4ea56b;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-15px;
+  border-radius:10px;
+}
+
+/* Container */
+
+.vision__container{
+  display:grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap:60px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* Card */
+
+.vision__card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(0,0,0,0.04);
+    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+    backdrop-filter: blur(5px);
+    transition: all 0.35s ease;
+    min-height:260px;
+}
+
+.vision__card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+
+.vision__icon{
+  font-size:34px;
+  margin-bottom:15px;
+}
+
+/* Title */
+
+.vision__card h3{
+  font-size:28px;
+  color:#3c8f5a;
+  margin-bottom:15px;
+}
+
+/* Text */
+
+.vision__card p{
+  color:#555;
+  line-height:1.7;
+  font-size:16px;
+}
+.mission__list{
+  list-style:none;
+  padding:0;
+  margin-top:20px;
+}
+
+.mission__list li{
+  position:relative;
+  padding-left:28px;
+  margin-bottom:14px;
+  line-height:1.6;
+  color:#555;
+}
+
+.mission__list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:7px;
+  width:10px;
+  height:10px;
+  background:#4ea56b;
+  border-radius:50%;
+}
+
+/* ==========================================
+   VISION - LARGE TABLET
+========================================== */
+@media screen and (max-width:1200px){
+
+  .vision{
+    height:auto;
+    min-height:100vh;
+  }
+
+  .vision__container{
+    max-width:900px;
+    padding:0 40px;
+  }
+
+  .vision__card{
+    padding:35px;
+  }
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+@media screen and (max-width:992px){
+
+  .vision{
+    padding:100px 0;
+  }
+
+  .vision__container{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .vision__title{
+    font-size:42px;
+    margin-bottom:50px;
+  }
+
+  .vision__card{
+    min-height:auto;
+  }
+}
+
+
+/* ==========================================
+   MOBILE LANDSCAPE
+========================================== */
+@media screen and (max-width:768px){
+
+  .vision{
+    padding:80px 20px;
+  }
+
+  .vision__title{
+    font-size:36px;
+    margin-bottom:40px;
+  }
+
+  .vision__container{
+    padding:0;
+    gap:25px;
+  }
+
+  .vision__card{
+    padding:28px;
+    border-radius:18px;
+  }
+
+  .vision__card h3{
+    font-size:24px;
+  }
+
+  .vision__card p{
+    font-size:15px;
+  }
+
+  .vision__icon{
+    font-size:28px;
+  }
+
+  .mission__list li{
+    font-size:15px;
+  }
+
+  .vision::after{
+    width:250px;
+    height:250px;
+  }
+
+  .vision .glow-right{
+    width:250px;
+    height:250px;
+  }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+@media screen and (max-width:576px){
+
+  .vision{
+    padding:70px 16px;
+    margin-bottom: 1px;
+    
+  }
+
+  .vision__title{
+    font-size:30px;
+    line-height:1.2;
+  }
+
+  .vision__title::after{
+    width:60px;
+  }
+
+  .vision__card{
+    padding:22px;
+  }
+
+  .vision__card h3{
+    font-size:22px;
+  }
+
+  .vision__card p{
+    font-size:14px;
+    line-height:1.8;
+  }
+
+  .mission__list li{
+    font-size:14px;
+    padding-left:24px;
+  }
+
+  .mission__list li::before{
+    width:8px;
+    height:8px;
+  }
+
+  .vision__icon{
+    font-size:24px;
+  }
+}
+
+
+/* ==========================================
+   VERY SMALL PHONE
+========================================== */
+@media screen and (max-width:380px){
+
+  .vision__title{
+    font-size:26px;
+  }
+
+  .vision__card{
+    padding:18px;
+  }
+
+  .vision__card h3{
+    font-size:20px;
+  }
+
+  .vision__card p{
+    font-size:13px;
+  }
+
+  .mission__list li{
+    font-size:13px;
+  }
+}
