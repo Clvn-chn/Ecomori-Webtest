@@ -222,7 +222,7 @@
       transform 1s ease;
 
    margin-top:0;
-}
+}  
 
 .feature-card:hover .feature-dropdown{
    max-height:300px;

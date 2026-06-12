@@ -147,16 +147,16 @@ const sr = ScrollReveal({
     delay: 400,
 })
 
-sr.reveal(`.home__data, .footer`)
-sr.reveal(`.home__img`, {origin: 'bottom'})
-sr.reveal(`.about__image`, {origin: 'right'})
-sr.reveal(`.enjoy__card, .product__card`, {interval: 100})
-sr.reveal(`.about__data`, {origin: 'left'})
-sr.reveal(`.about__img`, {origin: 'left'})
-sr.reveal(`.contact__container`, {origin: 'right'})
-sr.reveal(`.contact__form`, {interval: 100})
-sr.reveal(`.choose__image`, {origin: 'left'})
-sr.reveal(`.choose__content`, {origin: 'right'})
+// sr.reveal(`.home__data, .footer`)
+// sr.reveal(`.home__img`, {origin: 'bottom'})
+// sr.reveal(`.about__image`, {origin: 'right'})
+// sr.reveal(`.enjoy__card, .product__card`, {interval: 100})
+// sr.reveal(`.about__data`, {origin: 'left'})
+// sr.reveal(`.about__img`, {origin: 'left'})
+// sr.reveal(`.contact__container`, {origin: 'right'})
+// sr.reveal(`.contact__form`, {interval: 100})
+// sr.reveal(`.choose__image`, {origin: 'left'})
+// sr.reveal(`.choose__content`, {origin: 'right'})
 
 
 
