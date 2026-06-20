@@ -6,7 +6,8 @@ navClose = document.getElementById('nav-close')
 /*============== MENU SHOW ================*/
 if(navToggle){
     navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
+                navMenu.classList.add('show-menu')
+                header.classList.add('scroll-header')
     })
 }
 
@@ -66,6 +67,10 @@ window.addEventListener("scroll", function(){
 if(navClose){
     navClose.addEventListener('click', () =>{
         navMenu.classList.remove('show-menu')
+
+         if(window.scrollY < 50){
+            header.classList.remove('scroll-header')
+        }
     })
 }
 

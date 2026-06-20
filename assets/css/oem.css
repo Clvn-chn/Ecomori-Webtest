@@ -6,6 +6,7 @@
 }
 
 .oem__container{
+   width: 100%;
    max-width:1300px;
    margin:auto;
 
@@ -147,8 +148,9 @@
    position:relative;
    display:flex;
    justify-content:center;
-
+   align-items:center;
 }
+
 
 
 
@@ -170,44 +172,173 @@
 }
 
 .oem__image img{
-   width:1200%;
-   max-width:1520px;
+   width:100%;
+   max-width:650px;
+   height:auto;
 
    position:relative;
    z-index:2;
 
+   display:block;
 
+   filter:drop-shadow(
+      0 40px 40px rgba(0,0,0,.15)
+   );
 }
 
+/* ===================================== */
+/* OEM RESPONSIVE */
+/* ===================================== */
 
-/* RESPONSIVE */
+/* =========================
+   MACBOOK / LAPTOP
+========================= */
+@media screen and (max-width:1200px){
 
-@media screen and (max-width:1024px){
+   .oem{
+      padding:90px 40px;
+   }
 
    .oem__container{
-      grid-template-columns:1fr;
+      padding:50px;
+      gap:50px;
    }
 
    .oem__title{
-      font-size:56px;
+      font-size:58px;
+   }
+
+   .oem__image img{
+      max-width:500px;
+   }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+@media screen and (max-width:992px){
+
+   .oem{
+      padding:80px 30px;
+   }
+
+   .oem__container{
+      grid-template-columns:1fr;
+      gap:60px;
+
+      padding:50px 40px;
+   }
+
+   .oem__content{
+      text-align:center;
+   }
+
+   .oem__line{
+      margin:0 auto 25px;
+   }
+
+   .oem__text{
+      max-width:100%;
+   }
+
+   .oem__features{
+      grid-template-columns:repeat(2,1fr);
    }
 
    .oem__image{
       order:-1;
    }
+
+   .oem__image img{
+      max-width:450px;
+   }
+
 }
 
-@media screen and (max-width:768px){
+/* =========================
+   MOBILE
+========================= */
+@media screen and (max-width:576px){
+
+   .oem{
+      padding:70px 20px;
+   }
 
    .oem__container{
-      padding:40px 25px;
+      padding:30px 20px;
+      border-radius:25px;
+      gap:40px;
+   }
+
+   .oem__subtitle{
+      font-size:12px;
+      letter-spacing:1px;
    }
 
    .oem__title{
-      font-size:44px;
+      font-size:36px;
+      line-height:1.1;
+   }
+
+   .oem__text{
+      font-size:15px;
+      line-height:1.8;
+      text-align:left;
    }
 
    .oem__features{
       grid-template-columns:1fr;
+      gap:14px;
+      text-align: left;
    }
+
+   .feature{
+      padding:15px;
+      border-radius:16px;
+   }
+
+   .feature__icon{
+      width:45px;
+      height:45px;
+      font-size:20px;
+   }
+
+   .feature h4{
+      font-size:13px;
+   }
+
+   .feature span{
+      font-size:16px;
+   }
+
+   .oem__image img{
+      max-width:280px;
+   }
+
+   .oem__glow{
+      width:220px;
+      height:220px;
+      filter:blur(50px);
+   }
+
+}
+
+/* =========================
+   VERY SMALL PHONE
+========================= */
+@media screen and (max-width:375px){
+
+   .oem__title{
+      font-size:30px;
+   }
+
+   .oem__text{
+      font-size:14px;
+   }
+
+   .oem__image img{
+      max-width:240px;
+   }
+
 }

@@ -1,0 +1,329 @@
+
+
+
+/* =========================
+   FOOTER SECTION
+========================= */
+/* #region FOOTER SECTION */
+.footer{
+  padding-block: 3rem 2rem;
+  overflow: hidden;
+}
+
+
+.footer__container{
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 1rem; /* INI KUNCI UTAMA */
+  display: grid;
+  row-gap: 3rem;
+}
+
+.footer__logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-size: 1.5rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+}
+
+.footer__logo img{
+  width: 1.25rem;
+}
+
+.footer__data{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap : 3rem;
+}
+
+.footer__title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1rem;
+}
+
+.footer__links{
+  display: grid;
+  row-gap: .75rem;
+}
+
+.footer__link{
+  color: var(--text-color);
+  transition: color .4s;
+}
+
+.footer__link:hover{
+  color: var(--first-color);
+}
+
+.footer__copy{
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  text-align: center;
+}
+
+.whatsapp-icon-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.whatsapp-icon {
+  width: 70%;
+  height: 70%;
+  position: relative;
+  z-index: 1;
+}
+
+.beacon{
+  position:absolute;
+  bottom: 42px;
+  right: 42px;
+
+  height:1rem;
+  width:1rem;
+  border-radius:50%;
+  -webkit-animation: grow .4s 1 linear;
+  animation: grow .4s 1 linear;
+}
+
+.beacon:before{
+  position:absolute;
+  content:"";
+  height:3rem;
+  width:3rem;
+  left:0;
+  top:0;
+  background-color:transparent;
+  border-radius:50%;
+  box-shadow:0px 0px 7px 7px #25d366;
+  -webkit-animation:active 2s infinite linear;
+  animation:active 3s infinite linear;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(.1);
+  }
+  
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(.1);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes active{
+  0%{
+    -webkit-transform:scale(.1);
+    opacity:1;
+  }
+  70%{
+    -webkit-transform:scale(2.5);
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+@keyframes active{
+  0%{
+    transform:scale(.1);
+    opacity:1;
+  }
+  70%{
+    transform:scale(2.5);
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+  }
+}
+
+
+.whatsapp-float:hover .whatsapp-icon-wrapper {
+  background-color: #25d366;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* ≤ 375px (small phone) */
+@media screen and (max-width: 375px) {
+  .footer {
+    padding-block: 2rem 1.5rem;
+  }
+
+  .footer__data {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .footer__logo {
+    font-size: 1.25rem;
+  }
+
+  .footer__title {
+    font-size: 1rem;
+  }
+
+  .footer__copy {
+    font-size: .75rem;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .beacon {
+    bottom: 32px;
+    right: 32px;
+  }
+}
+
+/* ≥ 576px (large phone) */
+@media screen and (min-width: 576px) {
+  .footer__data {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  .footer {
+    padding-block: 3rem 2rem;
+  }
+}
+
+/* ≥ 992px (tablet / small laptop) */
+@media screen and (min-width: 992px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+
+  .footer__data {
+    grid-template-columns: repeat(3, max-content);
+    gap: 4rem;
+  }
+
+  .footer__logo {
+    font-size: 1.75rem;
+  }
+
+  .footer__copy {
+    margin-top: 3rem;
+  }
+
+  .whatsapp-float {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* ≥ 1200px (desktop large) */
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-block: 4rem 2.5rem;
+  }
+
+  .footer__data {
+    gap: 5rem;
+  }
+
+  .footer__title {
+    font-size: 1.25rem;
+  }
+
+  .whatsapp-float {
+    width: 70px;
+    height: 70px;
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/* =========================
+   FIX IPHONE 14 & MOBILE REAL WORLD
+========================= */
+@media screen and (max-width: 430px) {
+
+  .footer__container {
+    padding-inline: 1rem;
+  }
+
+  .footer__data {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer__links {
+    row-gap: .5rem;
+  }
+
+  .footer__title {
+    font-size: 1rem;
+    margin-bottom: .75rem;
+  }
+
+  .footer__logo {
+    font-size: 1.25rem;
+  }
+
+  .footer__copy {
+    margin-top: 1.5rem;
+    padding-inline: 1rem;
+    line-height: 1.4;
+  }
+
+  /* WhatsApp float fix */
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  /* FIX BEACON (ini sumber berantakan kamu) */
+  .beacon {
+    bottom: 34px;
+    right: 34px;
+  }
+}

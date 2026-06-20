@@ -18,7 +18,7 @@
   max-width:1300px;
 
   margin:auto;
-  margin-bottom:-100px;
+  margin-bottom:0px;
 
   display:grid;
 
@@ -117,7 +117,7 @@
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 10px;
-   margin-bottom: 20px;
+   margin-bottom: 25px;
 }
 
 .spec-card{
@@ -216,207 +216,168 @@
    color: #222;
 }
 
-/* ==========================================
-   PRODUCT - LARGE TABLET
-========================================== */
+
+/* ===================================== */
+/* PRODUCT RESPONSIVE */
+/* ===================================== */
+
+/* =========================
+   MACBOOK / LAPTOP
+========================= */
 @media screen and (max-width:1200px){
 
-  .product__container{
-    grid-template-columns:1fr;
-    gap:60px;
-    justify-items:center;
-  }
+   .product{
+      padding:100px 40px;
+   }
 
-  .product-content{
-    text-align:center;
-  }
+   .product__container{
+      gap:50px;
+   }
 
-  .title-line{
-    margin:0 auto 20px;
-  }
+   .product-title{
+      font-size:54px;
+   }
 
-  .product-description{
-    margin:0 auto 20px;
-  }
+   .product-image{
+      max-width:450px;
+   }
 
-  .product-image{
-    width:500px;
-  }
+   .spec-grid{
+      gap:12px;
+   }
 
-  .designed-grid{
-    justify-content:center;
-  }
 }
 
-
-/* ==========================================
+/* =========================
    TABLET
-========================================== */
+========================= */
 @media screen and (max-width:992px){
 
-  .product{
-    padding:100px 30px;
-  }
+   .product{
+      padding:90px 30px;
+   }
 
-  .product-title{
-    font-size:50px;
-  }
+   .product__container{
+      grid-template-columns:1fr;
+      gap:60px;
 
-  .product-image{
-    width:430px;
-  }
+      margin-bottom:0;
+   }
 
-  .spec-grid{
-    gap:15px;
-  }
+   .product-image{
+      margin:auto;
+      max-width:450px;
+   }
 
-  .designed-card{
-    padding:18px 20px;
-  }
+   .product-content{
+      text-align:center;
+   }
+
+   .title-line{
+      margin:0 auto 20px;
+   }
+
+   .product-description{
+      margin:auto auto 25px;
+      line-height:1.8;
+   }
+
+   .spec-grid{
+      grid-template-columns:repeat(2,1fr);
+   }
+
+   .designed-grid{
+      justify-content:center;
+   }
+
 }
 
-
-/* ==========================================
-   MOBILE LANDSCAPE
-========================================== */
-@media screen and (max-width:768px){
-
-  .product{
-    padding:80px 20px;
-  }
-
-  .product__container{
-    gap:45px;
-  }
-
-  .product-title{
-    font-size:40px;
-    line-height:1.15;
-  }
-
-  .product-description{
-    font-size:15px;
-    line-height:1.7;
-  }
-
-  .product-image{
-    width:100%;
-    max-width:380px;
-  }
-
-  .image-glow{
-    width:220px;
-    height:220px;
-    left:-20px;
-  }
-
-  .spec-grid{
-    grid-template-columns:1fr;
-  }
-
-  .spec-card{
-    text-align:left;
-  }
-
-  .designed-grid{
-    justify-content:center;
-  }
-
-  .designed-card{
-    width:100%;
-    max-width:320px;
-    justify-content:center;
-  }
-}
-
-
-/* ==========================================
+/* =========================
    MOBILE
-========================================== */
+========================= */
 @media screen and (max-width:576px){
 
-  .product{
-    padding:70px 16px;
-  }
+   .product{
+      padding:70px 20px;
+   }
 
-  .product-title{
-    font-size:32px;
-  }
+   .product__container{
+      gap:40px;
+   }
+   .product-content{
+      text-align:left;
+   }
 
-  .product-tag{
-    font-size:14px;
-  }
+   .product-tag{
+      font-size:12px;
+   }
 
-  .product-description{
-    font-size:14px;
-  }
+   .product-title{
+      font-size:34px;
+      line-height:1.15;
+   }
 
-  .product-image{
-    max-width:320px;
-  }
+   .product-description{
+      font-size:15px;
+      line-height:1.8;
+      text-align:left;
+   }
 
-  .image-glow{
-    width:180px;
-    height:180px;
-    filter:blur(70px);
-  }
+   .product-image{
+      max-width:300px;
+   }
 
-  .spec-card{
-    padding:14px;
-    gap:12px;
-  }
+   .image-glow{
+      width:180px;
+      height:180px;
+      left:-10px;
+      top:40px;
+      filter:blur(70px);
+   }
 
-  .spec-icon{
-    width:40px;
-    height:40px;
-  }
+   .spec-grid{
+      grid-template-columns:1fr;
+   }
 
-  .spec-icon i{
-    font-size:20px;
-  }
+   .spec-card{
+      padding:14px;
+      border-radius:18px;
+   }
 
-  .spec-info h3{
-    font-size:14px;
-  }
+   .spec-icon{
+      width:42px;
+      height:42px;
+   }
 
-  .spec-info p{
-    font-size:12px;
-  }
+   .spec-icon i{
+      font-size:1.2rem;
+   }
 
-  .designed-for h2{
-    font-size:20px;
-  }
+   .spec-info h3{
+      font-size:14px;
+   }
 
-  .designed-card{
-    padding:14px 18px;
-    font-size:12px;
-  }
+   .spec-info p{
+      font-size:12px;
+   }
 
-  .designed-icon{
-    font-size:22px;
-    margin-left: -30px;
-  }
-}
+   .designed-for h2{
+      font-size:20px;
+      text-align:center;
+   }
 
+   .designed-grid{
+      justify-content:center;
+      gap:12px;
+   }
 
-/* ==========================================
-   VERY SMALL PHONE
-========================================== */
-@media screen and (max-width:380px){
+   .designed-card{
+      padding:14px 18px;
+      font-size:12px;
+   }
 
-  .product-title{
-    font-size:28px;
-  }
+   .designed-icon{
+      font-size:20px;
+   }
 
-  .product-image{
-    max-width:280px;
-  }
-
-  .designed-card{
-    padding:14px 16px;
-  }
-
-  .spec-card{
-    padding:12px;
-  }
 }
